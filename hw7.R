@@ -96,7 +96,6 @@ bake(file="local_search.rds",{
         paramnames=c("Beta","rho","eta")
       )
   } -> mifs_local
-  attr(mifs_local,"ncpu") <- nbrOfWorkers()
   mifs_local
 }) -> mifs_local
 t_loc <- attr(mifs_local,"system.time")
