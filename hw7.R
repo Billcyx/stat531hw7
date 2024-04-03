@@ -2,6 +2,7 @@ library(foreach)
 library(doParallel)
 library(doRNG)
 library(pomp)
+install.packages("tidyverse")
 library(tidyverse)
 
 registerDoParallel(36)  # change this number locally, you don't have 36 cores.
