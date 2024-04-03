@@ -3,6 +3,7 @@ library(doParallel)
 library(doRNG)
 library(pomp)
 library(tidyverse)
+library(doSNOW)
 
 registerDoParallel(36)  # change this number locally, you don't have 36 cores.
 registerDoRNG(123456)
