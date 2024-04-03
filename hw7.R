@@ -120,7 +120,6 @@ bake(file="lik_local.rds",{
     mf |> coef() |> bind_rows() |>
       bind_cols(loglik=ll[1],loglik.se=ll[2])
   } -> results
-  attr(results,"ncpu") <- nbrOfWorkers()
   results
 }) -> results
 
@@ -167,7 +166,6 @@ bake(file="global_search.rds",
          mf |> coef() |> bind_rows() |>
            bind_cols(loglik=ll[1],loglik.se=ll[2])
        } -> results
-       attr(results,"ncpu") <- nbrOfWorkers()
        results
      }) |>
   filter(is.finite(loglik)) -> results
